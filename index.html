@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Aerodynamics - Project 10</title>
+    
+    <!--CSS-->
+    <style>
+        body{
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        .date {
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .back{
+            position: fixed;
+            top: 1px;
+            right: 1px;
+            background-color: yellow;
+            color: black;
+            width: 100px;
+            height: 30px;
+        }
+
+        .button:hover {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .page{
+            width: 100%;
+        }
+
+        .image_arrange_1 {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .image_arrange_1 img,
+        .image_arrange_2 img,
+        .image_arrange_3 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        .image_arrange_2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .image_arrange_3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        /* Prevent nested content from forcing columns wider */
+        .image_arrange_2 > div,
+        .image_arrange_3 > div {
+            min-width: 0;
+        }
+
+        figure {
+            margin: 1em 0;
+            min-width: 0;
+        }
+
+        figcaption {
+            font-weight: 700;
+            font-style: italic;
+            
+        }
+
+        @media (max-width: 499px) {
+            .image_arrange_2,
+            .image_arrange_3 {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--First page-->
+    <div class="page_0 page">
+        <h1>Computational Optimization of Home Aerodynamics</h1> 
+
+        <h2>Introduction</h2>
+        <p>This project took birth in a discussion between me and my elder brother Nikhil Wandile. He had a task to design his home by which I mean, deciding where to put the windows and doors to have a good ventilation and sunlight through out the year. I find it to be a very common problem. As far as I could think, one is very likely to not go into Complex Aerodynamics concepts to decide where to put the windows. It is a common way to think that if two windows or doors are placed opposite to each other, they would allow wind to flow through them allowing fresh breeze to come in and out of the home. But what we discussed is how our new friend - AI - and my old friend - CFD - could help us with this problem. What if there is a more better way to build the windows that we are unaware of.</p>
+
+        <p>When I though about the exmaple of how people cleverly used the aerodynamics, I find this to be very impressive. I heard about thi splace in the past, and as far as i remember this was a school in Rajastan known its heat, and this structure was made such that the air inside would be cooler than outside. And this structure is the reason, why I think our problem is worth a try.</p>
+
+        <h2>The Plan</h2>
+        Given below is the plan I have to carry on with this project. As I and Nikhil discussed, we thought about the following in which we could divide the project into.
+        <br>
+        <center>
+            <table border="1">
+                <thead>
+                    <th>Start Date</th>
+                    <th>Phase</th>
+                    <th>Link</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026-10-26</td>
+                        <td>Phase 1: Obtaining Inflow Boundary Condition on Colony</td>
+                        <td><button class="button_1 button">Click</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Phase 2: Classical CFD on the Colony</td>
+                        <td><button class="button_2 button">Click</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Phase 3: Obtaining Inflow Boundary Condition on the Plot</td>
+                        <td><button class="button_3 button">Click</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Phase 4: Classical CFD on Selected Designs</td>
+                        <td><button class="button_4">Click</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Phase 5: Optimization using Surrogate Models</td>
+                        <td><button class="button_5">Click</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Phase 6: Cross Checking with Classical CFD</td>
+                        <td><button class="button_6">Click</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+        <h2>Summary</h2>
+        <p>This is the overview of each Phase.</p>
+    </div>
+
+
+    <!--Phase 1-->
+    <div class="page_1 init page">
+        <button class="back_1 back button">Back</button>
+        <h2>1.1 Inflow Boundary Condition on the Colony</h2>
+
+        <div class="phase_1_1">
+            <h3>Modelling the Domain</h3>
+            <div class="date">2026-10-26 16:15:55</div>
+
+            <p>The image given below is obtained from the maps of the plot that needs to be modelled.</p>
+
+            <div class="image_arrange_2">
+                <div>
+                    <figure>
+                        <img src="./Style/Image_1.png">
+                        <figcaption>Simplified Image of Colony</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="./Style/Image_2.png">
+                        <figcaption>Satelite Image of Colony</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <p>Just by looking at the image one could get a good estimate of how the building should be modelled. With the scales known, this could be accruately mapped and the grid can then be used to simulate. Another question is to what extend should we expand the domain for our study. During the discussion with Nikhil about three to four days ago, we came to a conclusion that the region shown below (inside the box with blue borders) is what we will be considering for our study.</p><br>
+
+            <div class="image_arrange_3">
+                <div><figure>
+                    <img src="./Style/Image_1_1.png">
+                    <figcaption>Region of Interest</figcaption>
+                </figure></div>
+            </div>
+
+            <div class="date">2026-10-26 18:45:14</div>
+            <p>
+                Now it turns out that assuming the houses and buildings to be 2D plots, is one of the worst way to simulate the flow. I will have to use 3D plots. And for that I will have to model the building as cuboids.
+            </p>
+            <p>
+                Now using google Earth one can also get the 3D models of all the building on the 2D maps. But it turns out it provides Models of some selected building. Possibliy ones in large urban cities. The colony that we are interested in is noy one of them. So i thuohgt to do the following. I will note down the tiem at whcih image was taken, and the cordinates of each building that i am interested in from <a href="https://earth.google.com/">Google Earth Desktop App</a>. Then I will use <a href="https://www.sunearthtools.com/">sunearthtools.com</a> to get the elevation angle of sun from the data obtained from Google Earth. And then with the Elevation angle and Lenght of shoadows of each building (again obtained from Google Earth), and some simple trigonometry, I can estmate the height of the buildings. So the following section discusses about each of them.
+            </p>
+            <p>
+                The belwo image shows how I estimated the time at which this image must be taken. The first image is from the google earths. And the second image is from sunearthtool. And the lines in thrid shadow is directino in which shoadow of the sun will be pointing at different time. From google earth I got to know that the image was taken on 4th March 2026,and the shadows at different point of time is on the same day.
+            </p>
+            <div class="image_arrange_3">
+                <div><figure>    
+                    <img src="./Style/3_2.png">
+                    <figcaption>Google Maps Image</figcaption>
+                </figure></div>
+                <div><figure>
+                    <img src="./Style/3_1.png">
+                    <figcaption>SunEarthMaps Image</figcaption>
+                </figure></div>
+                <div><figure>
+                    <img src="./Style/3_3.jpg">
+                    <figcaption>Comparision between two</figcaption>
+                </figure></div>
+            </div>
+            <p>
+                Comparing the image i see that the shadow in the image is pointing to the shaow line close to 10:00AM. It also shows the Sun's Elevation angle to be equal to nearly 50.5 degrees.
+            </p>
+            <div class="image_arrange_2">
+                <div><figure>
+                    <img src="./Style/4_0.jpg">
+                    <figcaption>Shadow at 10AM</figcaption>
+                </figure></div>
+                <div><figure>
+                    <img src="./Style/4_1.jpg">
+                    <figcaption>Details at 10AM</figcaption>
+                </figure></div>
+            </div>
+            <div class="date">2026-10-26 22:48:13</div>
+            <p>
+                Now that we know the elevation angle of sun in map of Google earth, we can measure the shadow lengths of each building one by one and with that we could get the height of the buildings. But the problem is that except one building, every other building has unclaer shadows. Going into Google Earth, i was able to get to the 3D model of all the building, but I still struggled to find ttheir heights. So here is what I have decided. I will calculate the height of the clearest building. And then I will make a very crude estimation of the height of other building relative to this clear one. And likewise calculate height of all the buildings.
+            </p>
+            <p>
+                Then the next thign was to calculate the lenghts and breaths of building, which wasnt very difficult, and I was able to do that from google earth itself. With Elevation angle equal to e = 50.5 degrees (which is 0.88139 radians), and lenght of the shadow l = is 25.5m from the image. With this, height of the building h1 = l * tan(e) = 30.933m. And this will be used to estimate the heights of all the other buildings
+            </p>
+
+            <div class="image_arrange_2">
+                <div>
+                    <table border="1">
+                        <thead>
+                            <th>Building</th>
+                            <th>Heigth</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>h1</td>
+                                <td><i>30.933m</i></td>
+                            </tr>
+                            <tr>
+                                <td>h2</td>
+                                <td><i>24.7664m</i></td>
+                            </tr>
+                            <tr>
+                                <td>h3</td>
+                                <td><i>13.9198m</i></td>
+                            </tr>
+                            <tr>
+                                <td>h4</td>
+                                <td><i>12.5278m</i></td>
+                            </tr>
+                            <tr>
+                                <td>h5</td>
+                                <td><i>11.9014m</i></td>
+                            </tr>
+                            <tr>
+                                <td>h6</td>
+                                <td><i>15.4665m</i></td>
+                            </tr>
+                            <tr>
+                                <td>h7</td>
+                                <td><i>14.5385m</i></td>
+                            </tr>
+                            <tr>
+                                <td>h8</td>
+                                <td><i>12.5278m</i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <figcaption>Given, h1 = 30.933m</figcaption>
+                </div>
+                <div><figure>
+                    <img src="./Style/5_1.png">
+                    <figcaption>3D Model used for Height Estimation</figcaption>
+                </figure></div>
+                <div><figure>
+                    <img src="./Style/5_2.PNG">
+                    <figcaption>Dimnesion of Domain Obtanied</figcaption>
+                </figure></div>
+            </div>
+        </div>
+
+        <div class="phase_1_2">
+            <h3>1.2 Modelling the Inflow Boundary Condition</h3>
+        </div>
+    </div>
+
+
+    <!--Phase 2-->
+    <div class="page_2 init">
+        <button class="back_1 back button">Back</button>
+        <h1>Classical CFD on the Colony</h1>
+    </div>
+
+
+    <!--Phase 3-->
+    <div class="page_3 init">
+        <button class="back_1 back button">Back</button>
+        <h1>Inflow Boundary Condition on the Plot</h1>
+    </div>
+
+
+    <!--Phase 4-->
+    <div class="page_4 init">
+        <button class="back_1 back button">Back</button>
+        <h1>Classical CFD Desings on Selected Designs</h1>
+    </div>
+
+
+    <!--Phase 5-->
+    <div class="page_5 init">
+        <button class="back_1 back button">Back</button>
+        <h1>Optimization using Surrogate Models</h1>
+    </div>
+
+
+    <!--Phase 6-->
+    <div class="page_6 init">
+        <button class="back_1 back button">Back</button>
+        <h1>Cross Checking with Classical CFD</h1>
+    </div>
+
+
+    <div class="footer">
+        <!--Nikhil-->
+        <!--Arush-->
+        <!--Github-->
+    </div>
+
+
+    <!--JS-->
+    <script>
+        //Initially all the pages except the Page_0 will be in-visible
+        let pages = document.querySelectorAll(".init");
+        pages.forEach(child => {
+            child.style.display = 'none';
+        });
+
+        let visible = document.querySelector(".page_0");
+        visible.style.display = 'block';
+
+        //And then add event listener
+        for(let i=1;i<=6;i++){
+
+            let button_text = `.button_${i}`;
+            let page_text = `.page_${i}`;
+            let page = document.querySelector(page_text);
+            let button = document.querySelector(button_text);
+
+            button.addEventListener('click',()=>{
+                visible.style.display = 'none';
+                visible = page;
+                visible.style.display = 'block';
+            })
+        }
+
+        //This is for the back button
+        const back_1 = document.querySelectorAll('.back_1');
+        back_1.forEach((child) =>{
+            child.addEventListener('click',()=>{
+                visible.style.display = 'none';
+                visible = document.querySelector('.page_0');
+                visible.style.display = 'block';
+            })
+        });
+
+
+
+
+    </script>
+</body>;
