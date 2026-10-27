@@ -309,7 +309,51 @@
                 
             </p>
             <p>
-                With the data of wind at 50m and the image where I obtained measurmetn sof lenght and breath of all the buildings from google earth, i can make a quick decision that the size of domain will be ( L X W X H ) = ( 95.59m * 70.45m * 50m ). And now give below is the code and the animation of wind profile from 2000 to 2025 at cordinates (Latitude: 21.07, Longitude: 79.06)
+                With the data of wind at 50m and the image where I obtained measurmetn sof lenght and breath of all the buildings from google earth, i can make a quick decision that the size of domain will be ( L X W X H ) = ( 95.59m * 70.45m * 50m ). And now give below is the code and the animation of wind profile from 2000 to 2025 at cordinates (Latitude: 21.07, Longitude: 79.06) created using the above CSV data. I actually uploaded the videos on youtube, because they were too large for me to upload it on github or website.<br>
+
+                <table border="1">
+                    <thead>
+                        <th>Year</th>
+                        <th>Video Link</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025</td>
+                            <td><a href=""></a></td>
+                        </tr>
+                        <tr>
+                            <td>2024</td>
+                            <td><a href=""></a></td>
+                        </tr>
+                        <tr>
+                            <td>2023</td>
+                            <td><a href=""></a></td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td><a href=""></a></td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td><a href=""></a></td>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td><a href=""></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                The X and Y axis plots the U and V component of the velocity. It is assumed that the wind at region less than 10m is very visocus. And hence the wind is computed from 10 to 50m. But for the sake of my simualtion, I will use no-slip boundary condition on the ground. And this would mean that the profile model will look like this<br>
+                <div class="image_arrange_1">
+                    <figure>
+                        <img src="">
+                        <figcaption>Power Law Model for Wind profile</figcaption>
+                    </figure>
+                </div>
+            </p>
+            <p>
+                Using the above video, I have plotted this graphs which will allow us to visualise the time-avergaed wind speed and time-averaged wind direction, to get to the final inflow boundary condition that will be applied.
             </p>
         </div>
     </div>
