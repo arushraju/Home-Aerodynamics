@@ -24,7 +24,7 @@
             position: fixed;
             top: 1px;
             right: 1px;
-            background-color: yellow;
+            background-color: white;
             color: black;
             width: 100px;
             height: 30px;
@@ -230,10 +230,14 @@
                 Now that we know the elevation angle of sun in map of Google earth, we can measure the shadow lengths of each building one by one and with that we could get the height of the buildings. But the problem is that except one building, every other building has unclaer shadows. Going into Google Earth, i was able to get to the 3D model of all the building, but I still struggled to find ttheir heights. So here is what I have decided. I will calculate the height of the clearest building. And then I will make a very crude estimation of the height of other building relative to this clear one. And likewise calculate height of all the buildings.
             </p>
             <p>
-                Then the next thign was to calculate the lenghts and breaths of building, which wasnt very difficult, and I was able to do that from google earth itself. With Elevation angle equal to e = 50.5 degrees (which is 0.88139 radians), and lenght of the shadow l = is 25.5m from the image. With this, height of the building h1 = l * tan(e) = 30.933m. And this will be used to estimate the heights of all the other buildings
+                Then the next thing was to calculate the lenghts and breaths of building, which wasnt very difficult, and I was able to do that from google earth itself. With Elevation angle equal to e = 50.5 degrees (which is 0.88139 radians), and lenght of the shadow l = is 25.5m from the image. With this, height of the building h1 = l * tan(e) = 30.933m. And this will be used to estimate the heights of all the other buildings
             </p>
 
-            <div class="image_arrange_2">
+            <div class="image_arrange_3">
+                <div><figure>
+                    <img src="./Style/5_1.png">
+                    <figcaption>3D Model used for Height Estimation</figcaption>
+                </figure></div>
                 <div>
                     <table border="1">
                         <thead>
@@ -278,18 +282,35 @@
                     <figcaption>Given, h1 = 30.933m</figcaption>
                 </div>
                 <div><figure>
-                    <img src="./Style/5_1.png">
-                    <figcaption>3D Model used for Height Estimation</figcaption>
-                </figure></div>
-                <div><figure>
                     <img src="./Style/5_2.PNG">
-                    <figcaption>Dimnesion of Domain Obtanied</figcaption>
+                    <figcaption>Dimension of Domain Obtanied</figcaption>
                 </figure></div>
             </div>
+
+            <p>With this I could successfully model the domain in software before starting the simulation.</p>
         </div>
 
         <div class="phase_1_2">
             <h3>1.2 Modelling the Inflow Boundary Condition</h3>
+            <div class="date">2026-10-27 09:24:31</div>
+            <p>
+                I would now like to get the direction and maginitude of wind in this region, because this will act as inflow boundary condition, and is absoultely neccessary part of the solver. Thunking about the task, let me be very clear about what i want. There are three season in consideration. Summer, Winter and Monsoon. And there are also directions of the wind everyday . Let me first see how much fluctuations we have in the magnitude and direction of winds before expressing my interest in what way I want to capture the wind data, after analysing.
+            </p>
+            <p>
+                So given below are the CSV files I got from the website: <a href="https://power.larc.nasa.gov/">power.larc.nasa.gov</a>. This was an amazing website. I have taken the direction and magnitude of winds, at height equal to 10m and 50m. Hourly data is taken from each from 1st Jan 2020 to 31st Dec 2025. And the files afre provided here (<a href="./Data/2020_Hourly_Wind_Data.csv">2020</a> , <a href="./Data/2021_Hourly_Wind_Data.csv">2021</a> , <a href="./Data/2022_Hourly_Wind_Data.csv">2022</a> , <a href="./Data/2023_Hourly_Wind_Data.csv">2023</a> , <a href="./Data/2024_Hourly_Wind_Data.csv">2024</a> , <a href="./Data/2025_Hourly_Wind_Data.csv">2025</a>). With this data, I would first make an animation of wind vector with time for all this time.
+            </p>
+            <p>
+                The csv file given above, have <b>Wind Speeds at 10m altitude</b>, <b>Wind Speed at 50m altitude</b>, <b>Wind DIrectino at 10m altitude</b>, and finally <b>Wind Direction at 50m altitude</b>. Wind travels with larger speeds at higher altitudes. And this is because with larger altitudes, the friction experienced by fluid due to ground, is lower. I will surely consider having a non uniform speed profile in Z (height). And it goes by the Power law that I will discuss later. But here i am making an assumption that direction of wind is constant with height from 0 to 10 to 50m altitude. The expression for power law for wind profile is given below:<br>
+                <div class="image_arrange_3">
+                    <div><figure>
+                        <img src="./Style/">
+                    </figure></div>
+                </div>
+                
+            </p>
+            <p>
+                With the data of wind at 50m and the image where I obtained measurmetn sof lenght and breath of all the buildings from google earth, i can make a quick decision that the size of domain will be ( L X W X H ) = ( 95.59m * 70.45m * 50m ). And now give below is the code and the animation of wind profile from 2000 to 2025 at cordinates (Latitude: 21.07, Longitude: 79.06)
+            </p>
         </div>
     </div>
 
