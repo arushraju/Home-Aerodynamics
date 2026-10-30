@@ -97,59 +97,112 @@
 <body>
     <!--First page-->
     <div class="page_0 page">
-        <h1>Computational Optimization of Home Aerodynamics</h1> 
+        
+        <h1>Computational Optimization of Home Aerodynamics</h1>
 
         <h2>Introduction</h2>
-        <p>This project took birth in a discussion between me and my elder brother Nikhil Wandile. He had a task to design his home by which I mean, deciding where to put the windows and doors to have a good ventilation and sunlight through out the year. I find it to be a very common problem. As far as I could think, one is very likely to not go into Complex Aerodynamics concepts to decide where to put the windows. It is a common way to think that if two windows or doors are placed opposite to each other, they would allow wind to flow through them allowing fresh breeze to come in and out of the home. But what we discussed is how our new friend - AI - and my old friend - CFD - could help us with this problem. What if there is a more better way to build the windows that we are unaware of.</p>
 
-        <p>When I though about the exmaple of how people cleverly used the aerodynamics, I find this to be very impressive. I heard about thi splace in the past, and as far as i remember this was a school in Rajastan known its heat, and this structure was made such that the air inside would be cooler than outside. And this structure is the reason, why I think our problem is worth a try.</p>
+        <p>
+            This project took birth in a discussion between my elder brother, Nikhil Wandile, and me. 
+            He had a task to design his home, by which I mean deciding where to put the windows 
+            and doors to have good ventilation and sunlight throughout the year. 
+            I find this to be a very common problem. As far as I could think, one is very 
+            unlikely to go into complex aerodynamics concepts to decide where to put the windows. 
+            It is a common way to think that if two windows or doors are placed opposite to each 
+            other, they would allow wind to flow through them, allowing fresh breeze to come in 
+            and out of the home. But what we discussed is how our new friend - AI - and my old 
+            friend - CFD - could help us with this problem. What if there is a better way to 
+            build the windows that we are unaware of?
+        </p>
+
+        <p>
+            When I thought about the example of how people cleverly used aerodynamics, 
+            I found this to be very impressive. I heard about this place in the past, and 
+            as far as I remember, <a target="_blank" href="https://edition.cnn.com/style/article/india-rajkumari-ratnavti-kellogg-school-spc-intl">This</a> was a school in Rajasthan, known for its heat, and 
+            this structure was made such that the air inside would be cooler than outside. 
+            And this structure is the reason why I think our problem is worth a try.
+        </p>
 
         <h2>The Plan</h2>
-        Given below is the plan I have to carry on with this project. As I and Nikhil discussed, we thought about the following in which we could divide the project into.
+
+        <p>
+            Given below is the plan I have to carry on with this project. As Nikhil and I 
+            discussed, we thought about the following ways in which we could divide the project.
+        </p>
+
         <br>
+        <!--Table-->
         <center>
             <table border="1">
                 <thead>
-                    <th>Start Date</th>
-                    <th>Phase</th>
-                    <th>Link</th>
+                    <tr>
+                        <th>Start Date</th>
+                        <th>Phase</th>
+                        <th>Link</th>
+                    </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <td>2026-10-26</td>
                         <td>Phase 1: Obtaining Inflow Boundary Condition on Colony</td>
                         <td><button class="button_1 button">Click</button></td>
                     </tr>
+
                     <tr>
                         <td></td>
                         <td>Phase 2: Classical CFD on the Colony</td>
                         <td><button class="button_2 button">Click</button></td>
                     </tr>
+
                     <tr>
                         <td></td>
                         <td>Phase 3: Obtaining Inflow Boundary Condition on the Plot</td>
                         <td><button class="button_3 button">Click</button></td>
                     </tr>
+
                     <tr>
                         <td></td>
                         <td>Phase 4: Classical CFD on Selected Designs</td>
                         <td><button class="button_4">Click</button></td>
                     </tr>
+
                     <tr>
                         <td></td>
-                        <td>Phase 5: Optimization using Surrogate Models</td>
+                        <td>Phase 5: Optimization Using Surrogate Models</td>
                         <td><button class="button_5">Click</button></td>
                     </tr>
+
                     <tr>
                         <td></td>
-                        <td>Phase 6: Cross Checking with Classical CFD</td>
+                        <td>Phase 6: Cross-Checking with Classical CFD</td>
                         <td><button class="button_6">Click</button></td>
                     </tr>
                 </tbody>
             </table>
         </center>
+
         <h2>Summary</h2>
-        <p>This is the overview of each Phase.</p>
+
+        <p>
+            <table border="1">
+                <thead>
+                    <th>Phase</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phase 1</td>
+                        <td>In this phase, the fundamental building block of the project was made. I prepared myself with the inflow condition and the model of the CFD simulation that I am going to perform. Using maps and soem clever softare I was able to make out the dimension of the 3D mkdel along with the inflow condition of wind.</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2</td>
+                        <td>Here I made the complete model of the domain, and used free open-source software called CLoseFOAM. This phase is all about having to deal with newer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+
     </div>
 
 
@@ -179,7 +232,7 @@
                 </div>
             </div>
 
-            <p>Just by looking at the image one could get a good estimate of how the building should be modelled. With the scales known, this could be accruately mapped and the grid can then be used to simulate. Another question is to what extend should we expand the domain for our study. During the discussion with Nikhil about three to four days ago, we came to a conclusion that the region shown below (inside the box with blue borders) is what we will be considering for our study.</p><br>
+            <p>Just by looking at the image, one could get a good estimate of how the building should be modelled. With the scales known, this could be accurately mapped, and the grid can then be used to simulate. Another question is to what extent should we expand the domain for our study. During the discussion with Nikhil about three to four days ago, we came to a conclusion that the region shown below (inside the box with blue borders) is what we will be considering for our study.</p><br>
 
             <div class="image_arrange_3">
                 <div><figure>
@@ -190,14 +243,17 @@
 
             <div class="date">2026-10-26 18:45:14</div>
             <p>
-                Now it turns out that assuming the houses and buildings to be 2D plots, is one of the worst way to simulate the flow. I will have to use 3D plots. And for that I will have to model the building as cuboids.
+                Now it turns out that assuming the houses and buildings to be 2D plots is one of the worst ways to simulate the flow. I will have to use 3D plots. And for that, I will have to model the buildings as cuboids.
             </p>
+
             <p>
-                Now using google Earth one can also get the 3D models of all the building on the 2D maps. But it turns out it provides Models of some selected building. Possibliy ones in large urban cities. The colony that we are interested in is noy one of them. So i thuohgt to do the following. I will note down the tiem at whcih image was taken, and the cordinates of each building that i am interested in from <a href="https://earth.google.com/">Google Earth Desktop App</a>. Then I will use <a href="https://www.sunearthtools.com/">sunearthtools.com</a> to get the elevation angle of sun from the data obtained from Google Earth. And then with the Elevation angle and Lenght of shoadows of each building (again obtained from Google Earth), and some simple trigonometry, I can estmate the height of the buildings. So the following section discusses about each of them.
+                Now, using Google Earth, one can also get the 3D models of all the buildings on the 2D maps. But it turns out that it provides models of some selected buildings, possibly ones in large urban cities. The colony that we are interested in is not one of them. So I thought to do the following. I will note down the time at which the image was taken and the coordinates of each building that I am interested in from <a href="https://earth.google.com/">Google Earth Desktop App</a>. Then I will use <a href="https://www.sunearthtools.com/">sunearthtools.com</a> to get the elevation angle of the sun from the data obtained from Google Earth. And then, with the elevation angle and the length of shadows of each building (again obtained from Google Earth), and some simple trigonometry, I can estimate the height of the buildings. So the following section discusses each of them.
             </p>
+
             <p>
-                The belwo image shows how I estimated the time at which this image must be taken. The first image is from the google earths. And the second image is from sunearthtool. And the lines in thrid shadow is directino in which shoadow of the sun will be pointing at different time. From google earth I got to know that the image was taken on 4th March 2026,and the shadows at different point of time is on the same day.
+                The below image shows how I estimated the time at which this image must have been taken. The first image is from Google Earth, and the second image is from SunEarthTools. And the lines in the third image show the shadow directions in which the shadows of the sun will be pointing at different times. From Google Earth, I got to know that the image was taken on 4th March 2026, and the shadows at different points of time are on the same day.
             </p>
+
             <div class="image_arrange_3">
                 <div><figure>    
                     <img src="./Style/3_2.png">
@@ -226,11 +282,13 @@
                 </figure></div>
             </div>
             <div class="date">2026-10-26 22:48:13</div>
+
             <p>
-                Now that we know the elevation angle of sun in map of Google earth, we can measure the shadow lengths of each building one by one and with that we could get the height of the buildings. But the problem is that except one building, every other building has unclaer shadows. Going into Google Earth, i was able to get to the 3D model of all the building, but I still struggled to find ttheir heights. So here is what I have decided. I will calculate the height of the clearest building. And then I will make a very crude estimation of the height of other building relative to this clear one. And likewise calculate height of all the buildings.
+                Now that we know the elevation angle of the sun in the Google Earth map, we can measure the shadow lengths of each building one by one, and with that, we could get the heights of the buildings. But the problem is that, except for one building, every other building has unclear shadows. Going into Google Earth, I was able to get the 3D model of all the buildings, but I still struggled to find their heights. So here is what I have decided. I will calculate the height of the clearest building. And then I will make a very crude estimation of the heights of the other buildings relative to this clear one. And likewise, calculate the heights of all the buildings.
             </p>
+
             <p>
-                Then the next thing was to calculate the lenghts and breaths of building, which wasnt very difficult, and I was able to do that from google earth itself. With Elevation angle equal to e = 50.5 degrees (which is 0.88139 radians), and lenght of the shadow l = is 25.5m from the image. With this, height of the building h1 = l * tan(e) = 30.933m. And this will be used to estimate the heights of all the other buildings
+                Then the next thing was to calculate the lengths and breadths of the buildings, which wasn't very difficult, and I was able to do that from Google Earth itself. With the elevation angle equal to e = 50.5 degrees (which is 0.88139 radians), and the length of the shadow l = 25.5 m from the image, the height of the building h1 = l * tan(e) = 30.933 m. And this will be used to estimate the heights of all the other buildings.
             </p>
 
             <div class="image_arrange_3">
@@ -293,28 +351,33 @@
         <div class="phase_1_2">
             <h3>1.2 Modelling the Inflow Boundary Condition</h3>
             <div class="date">2026-10-27 09:24:31</div>
+            
             <p>
-                I would now like to get the direction and maginitude of wind in this region, because this will act as inflow boundary condition, and is absoultely neccessary part of the solver. Thunking about the task, let me be very clear about what i want. There are three season in consideration. Summer, Winter and Monsoon. And there are also directions of the wind everyday . Let me first see how much fluctuations we have in the magnitude and direction of winds before expressing my interest in what way I want to capture the wind data, after analysing.
+                I would now like to get the direction and magnitude of wind in this region, because this will act as an inflow boundary condition, and is an absolutely necessary part of the solver. Thinking about the task, let me be very clear about what I want. There are three seasons in consideration: Summer, Winter, and Monsoon. And there are also different wind directions every day. Let me first see how much fluctuation we have in the magnitude and direction of winds before expressing my interest in how I want to capture the wind data after analysing it.
             </p>
+
             <p>
-                So given below are the CSV files I got from the website: <a href="https://power.larc.nasa.gov/">power.larc.nasa.gov</a>. This was an amazing website. I have taken the direction and magnitude of winds, at height equal to 10m and 50m. Hourly data is taken from each from 1st Jan 2020 to 31st Dec 2025. And the files afre provided here (<a href="./Data/2020_Hourly_Wind_Data.csv">2020</a> , <a href="./Data/2021_Hourly_Wind_Data.csv">2021</a> , <a href="./Data/2022_Hourly_Wind_Data.csv">2022</a> , <a href="./Data/2023_Hourly_Wind_Data.csv">2023</a> , <a href="./Data/2024_Hourly_Wind_Data.csv">2024</a> , <a href="./Data/2025_Hourly_Wind_Data.csv">2025</a>). With this data, I would first make an animation of wind vector with time for all this time.
+                So, given below are the CSV files I got from the website: <a href="https://power.larc.nasa.gov/">power.larc.nasa.gov</a>. This was an amazing website. I have taken the direction and magnitude of winds at heights equal to 10 m and 50 m. Hourly data is taken for each from 1st Jan 2020 to 31st Dec 2025. And the files are provided here (<a href="./Data/2020_Hourly_Wind_Data.csv">2020</a>, <a href="./Data/2021_Hourly_Wind_Data.csv">2021</a>, <a href="./Data/2022_Hourly_Wind_Data.csv">2022</a>, <a href="./Data/2023_Hourly_Wind_Data.csv">2023</a>, <a href="./Data/2024_Hourly_Wind_Data.csv">2024</a>, <a href="./Data/2025_Hourly_Wind_Data.csv">2025</a>). With this data, I would first make an animation of the wind vector with time for all this time.
             </p>
+
             <p>
-                The csv file given above, have <b>Wind Speeds at 10m altitude</b>, <b>Wind Speed at 50m altitude</b>, <b>Wind DIrectino at 10m altitude</b>, and finally <b>Wind Direction at 50m altitude</b>. Wind travels with larger speeds at higher altitudes. And this is because with larger altitudes, the friction experienced by fluid due to ground, is lower. I will surely consider having a non uniform speed profile in Z (height). And it goes by the Power law that I will discuss later. But here i am making an assumption that direction of wind is constant with height from 0 to 10 to 50m altitude. The expression for power law for wind profile is given below:<br>
+                The CSV files given above have <b>Wind Speeds at 10m altitude</b>, <b>Wind Speed at 50m altitude</b>, <b>Wind Direction at 10m altitude</b>, and finally <b>Wind Direction at 50m altitude</b>. Wind travels at higher speeds at higher altitudes. And this is because, at greater altitudes, the friction experienced by the fluid due to the ground is lower. I will surely consider having a non-uniform speed profile in Z (height). And it goes by the Power Law, which I will discuss later. But here, I am making an assumption that the direction of wind is constant with height from 0 to 10 to 50 m altitude. The expression for the Power Law for the wind profile is given below:<br>
                 <div class="image_arrange_3">
                     <div><figure>
                         <img src="./Style/">
                     </figure></div>
                 </div>
-                
             </p>
+
             <p>
-                With the data of wind at 50m and the image where I obtained measurmetn sof lenght and breath of all the buildings from google earth, i can make a quick decision that the size of domain will be ( L X W X H ) = ( 95.59m * 70.45m * 50m ). And now give below is the code and the animation of wind profile from 2000 to 2025 at cordinates (Latitude: 21.07, Longitude: 79.06) created using the above CSV data. I actually uploaded the videos on youtube, because they were too large for me to upload it on github or website.<br>
+                With the wind data at 50m and the image where I obtained measurements of the length and breadth of all the buildings from Google Earth, I can make a quick decision that the size of the domain will be (L X W X H) = (95.59m * 70.45m * 50m). And now, given below is the code and the animation of the wind profile from 2020 to 2025 at coordinates (Latitude: 21.07, Longitude: 79.06), created using the above CSV data. I actually uploaded the videos on YouTube because they were too large for me to upload to GitHub or my website.<br>
 
                 <table border="1">
                     <thead>
-                        <th>Year</th>
-                        <th>Video Link</th>
+                        <tr>
+                            <th>Year</th>
+                            <th>Video Link</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -331,30 +394,33 @@
                         </tr>
                         <tr>
                             <td>2022</td>
-                            <td><a href=""></a></td>
+                            <td><a target="_blank" href="https://youtu.be/4ST9ajyH_Vc?si=NFOkqy0_94ELDe-0">Link</a></td>
                         </tr>
                         <tr>
                             <td>2021</td>
-                            <td><a href=""></a></td>
+                            <td><a target="_blank" href="https://youtu.be/3mJCnmNEi2c?si=hnZ0XLZ-WK9Ef9UF">Link</a></td>
                         </tr>
                         <tr>
                             <td>2020</td>
-                            <td><a href=""></a></td>
+                            <td><a target="_blank" href="https://youtu.be/hrDmO0B8bKw?si=PF9fcYK0GPcJFAh9">Link</a></td>
                         </tr>
                     </tbody>
                 </table>
 
-                The X and Y axis plots the U and V component of the velocity. It is assumed that the wind at region less than 10m is very visocus. And hence the wind is computed from 10 to 50m. But for the sake of my simualtion, I will use no-slip boundary condition on the ground. And this would mean that the profile model will look like this<br>
+                The X and Y axes plot the U and V components of the velocity. It is assumed that the wind in the region below 10m is very viscous. And hence, the wind is computed from 10 to 50m. But for the sake of my simulation, I will use a no-slip boundary condition on the ground. And this would mean that the profile model will look like this:<br>
+
                 <div class="image_arrange_1">
                     <figure>
                         <img src="">
-                        <figcaption>Power Law Model for Wind profile</figcaption>
+                        <figcaption>Power Law Model for Wind Profile</figcaption>
                     </figure>
                 </div>
             </p>
+
             <p>
-                Using the above video, I have plotted this graphs which will allow us to visualise the time-avergaed wind speed and time-averaged wind direction, to get to the final inflow boundary condition that will be applied.
+                Using the above videos, I have plotted these graphs, which will allow us to visualise the time-averaged wind speed and time-averaged wind direction, to get to the final inflow boundary condition that will be applied.
             </p>
+
         </div>
     </div>
 
